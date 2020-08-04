@@ -1,0 +1,41 @@
+.heading {
+  font-weight: bold !important;
+  color: #2196f3;
+}
+
+.new-requirement-wrapper {
+  padding: 20px;
+}
+
+.subject {
+  margin: 20px 0;
+}
+
+.description {
+  margin: 20px 0;
+}
+
+.requirements-table-wrapper {
+  /* margin-top: 20px; */
+}
+
+.hr-info {
+  margin: 20px 0;
+}
+
+.req-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-req {
+  margin: 10px !important;
+}
+
+.app-logo {
+  height: 60px;
+  width: auto;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
