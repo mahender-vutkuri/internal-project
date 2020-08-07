@@ -2,24 +2,11 @@
 This is a boilerplate for React using Typescript, Material UI and Redux, React Router.
 
 ## Demo
-*Visit [Demo link](https://material-ui-admin.herokuapp.com/)*
+<!-- *Visit [Demo link](https://material-ui-admin.herokuapp.com/)* -->
 #### Login credentials
 * username/email: *anything*
 * password: *anything*
-https://github.com/goemen/react-material-ui-typescript
-## Features
-### Authentication
-The app uses redux to manage the authentication state, and uses redux-auth-wrapper library to guard the routes
-#### Pages
-*  Login Page
-
-### Admin dashboard
-The template comes with responsive modern charts, analytics, tables that are easily customizable to meet your data. 
-
-### Other pages
-* Inbox, Outbox, Drafts
-* Profile Page (coming soon)
-
+<!-- https://github.com/goemen/react-material-ui-typescript -->
 ## How to run
 ### Local development
 * Clone the project and cd into project
@@ -32,7 +19,7 @@ The template comes with responsive modern charts, analytics, tables that are eas
 * npm run deploy
 
 ## Key technologies & Libraries used
-* Material UI (1.1.0) - (for ui components)
+* Material UI 
 * React Router
 * Redux
 * Typescript

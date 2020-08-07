@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Typography } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import MaterialTable, { Column } from "material-table";
 import Button from "@material-ui/core/Button";
 import Input from '@material-ui/core/Input';
@@ -19,6 +20,7 @@ interface ITableState {
 }
 
 function RequirementsInfoTable() {
+    const [files, setFiles] = React.useState(undefined)
     const [state, setState] = React.useState<ITableState>({
         columns: [
             { title: "Technology", field: "skillName" },
@@ -31,6 +33,11 @@ function RequirementsInfoTable() {
 
     const postRequirment = () => {
         console.log(state.data);
+        console.log(files);
+
+        const formData = new FormData()
+        formData.append("file", files);
+        console.log(formData)
     };
     return (
         <div className="requirements-table" id="req-tbl">
@@ -98,6 +105,19 @@ function RequirementsInfoTable() {
                 }}
             />
             <div className="req-actions">
+                <input
+                    accept="application/msword,application/pdf"
+                    style={{ display: 'none' }}
+                    id="info-documents-btn"
+                    multiple={true}
+                    type="file"
+                    onChange={e => setFiles(e.target.files)}
+                />
+                <label htmlFor="info-documents-btn">
+                    <Button startIcon={<CloudUploadIcon />} className="post-req " variant="contained" color="primary" component="span">
+                        Upload
+                    </Button>
+                </label>
                 <Button
                     className="post-req "
                     variant="contained"
@@ -132,7 +152,7 @@ function NewRequirement() {
             </div>
             <div className="description">
 
-                <TextField fullWidth={true} multiline={true} rowsMax={5} label="Description" variant="outlined" value={description}
+                <TextField fullWidth={true} multiline={true} rows={5} rowsMax={7} label="Description" variant="outlined" value={description}
                     onChange={e => setDescription(e.target.value)} />
             </div>
             <div className="hr-info">
